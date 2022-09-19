@@ -17,8 +17,8 @@ module.exports = {
       required: true,
     },
     ticket: {
-      type: 'string',
-      required: true,
+      model: 'ticket',
+      required: true
     },
     event: {
       model: 'event',

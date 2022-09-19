@@ -36,7 +36,7 @@ module.exports = {
       },
       body: JSON.stringify({
         ticketId: ticket.passkitPassId,
-        //ticketId: inputs.id
+        // ticketId: inputs.id
       })
     }).then(res => res.json());
     sails.log(revokedPass);

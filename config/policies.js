@@ -27,7 +27,8 @@ module.exports.policies = {
   'validate/events': true,
   'validate/device-registration': true,
   'validate/validate': true,
-  'validate/stats/tickets': true,
+  'validate/tickets': true,
+  'validate/scans': true,
   'version': true,
   'pubsub/token': true,
 
