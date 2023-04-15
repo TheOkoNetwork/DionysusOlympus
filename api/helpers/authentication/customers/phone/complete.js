@@ -52,8 +52,7 @@ module.exports = {
     .verificationChecks
     .create({to: phoneNumber, code: inputs.mfaCode});
       sails.log(verification);
-      //@TODO remove the 666666 bypass code BEFORE production
-      if (inputs.mfaCode === '666666' || verification.status === 'approved') {
+      if (verification.status === 'approved') {
         return await sails.helpers.hermes.jwt.with({phoneNumber: phoneNumber, salesChannel: inputs.salesChannel, organiser: inputs.organiser});
       } else {
         return false;
