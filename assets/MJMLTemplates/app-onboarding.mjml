@@ -1,0 +1,71 @@
+<mjml>
+  <mj-head>
+    <mj-title>Discount Light</mj-title>
+    <mj-preview>Pre-header Text</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"></mj-all>
+      <mj-text font-weight="400" font-size="16px" color="#000000" line-height="24px" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"></mj-text>
+    </mj-attributes>
+    <mj-style inline="inline">
+      .body-section {
+      -webkit-box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15);
+      }
+    </mj-style>
+    <mj-style inline="inline">
+      .text-link {
+      color: #5e6ebf
+      }
+    </mj-style>
+    <mj-style inline="inline">
+      .footer-link {
+      color: #888888
+      }
+    </mj-style>
+
+  </mj-head>
+  <mj-body background-color="#E7E7E7" width="600px">
+    <mj-section full-width="full-width" background-color="#040B4F" padding-bottom="0">
+      <mj-column width="100%">
+        <mj-image src="https://dionysusassets.blob.core.windows.net/assets/DionysusLogoNoSloganMain.png" alt="" align="center" width="150px" />
+      </mj-column>
+    </mj-section>
+    <mj-wrapper padding-top="0" padding-bottom="0" css-class="body-section">
+      <mj-section background-color="#ffffff" padding-left="15px" padding-right="15px">
+        <mj-column width="100%">
+          <mj-text color="#637381" font-size="16px">
+            Hey there {{customer.fullName}}!
+          </mj-text>
+          <mj-text color="#637381" font-size="16px">
+            Here are your tickets for the {{event.name}} event.
+          </mj-text>
+          <mj-text color="#637381" font-size="16px">
+            To claim your tickets, please click the button below or copy and paste the link into your browser.
+          </mj-text>
+          <mj-button background-color="#5e6ebf" align="center" color="#ffffff" font-size="17px" font-weight="bold" href="https://{{salesDomain}}/signin" width="300px">
+            Claim tickets
+          </mj-button>
+          <mj-text color="#637381" font-size="16px">
+            Button not working? Copy the following link, {{salesDomain}}/signin into your browser.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+
+    <mj-wrapper full-width="full-width">
+      <mj-section padding-top="0">
+        <mj-group>
+          <mj-column width="100%" padding-right="0">
+            <mj-text color="#445566" font-size="11px" align="center" line-height="16px" font-weight="bold">
+              <a class="footer-link" href="https://dionysusticketing.app/privacy">Privacy</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+              <a class="footer-link" href="https://dionysusticketing.app">Powered by Dionysus</a>
+            </mj-text>
+          </mj-column>
+        </mj-group>
+
+      </mj-section>
+    </mj-wrapper>
+
+  </mj-body>
+</mjml>

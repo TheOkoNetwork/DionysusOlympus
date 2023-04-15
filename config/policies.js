@@ -9,37 +9,48 @@
  */
 
 module.exports.policies = {
-  '*': false,
-  'event/find': true,
-  'event/findOne': true,
+  'organisers/create': true,
+  'organisers/list': true,
+  'organisers/fetch': true,
 
-  'cart/new': true,
-  'cart/cart': true,
-  'cart/pay': true,
-  'cart/order': true,
-  'stripe/webhook': true,
-  'order/order': true,
-  'order/tickets': true,
-  'tickets/claim': true,
-  'tickets/transfer': true,
-  'tickets/tickets': true,
-  'tickets/mobile-wallet': true,
-  'validate/events': true,
-  'validate/device-registration': true,
-  'validate/validate': true,
-  'validate/tickets': true,
-  'validate/scans': true,
-  'version': true,
-  'pubsub/token': true,
+  'organisers/accessPoints/create': true,
+  'organisers/accessPoints/list': true,
+  'organisers/accessPoints/fetch': true,
+
+  'organisers/salesChannels/create': true,
+  'organisers/salesChannels/list': true,
+  'organisers/salesChannels/fetch': true,
 
 
-  'admin/tickets/transfer': 'isValidAppsmithKey',
-  'admin/tickets/tickets': 'isValidAppsmithKey',
-  'admin/tickets/ticket': 'isValidAppsmithKey',
-  'admin/uid-to-email': 'isValidAppsmithKey',
-  'admin/events/set-total-qty': 'isValidAppsmithKey',
-  'admin/tickets/bulk-issue': 'isValidAppsmithKey',
-  'admin/roles/set': 'isValidAppsmithKey',
+  'organisers/events/create': true,
+  'organisers/events/list': true,
+  'organisers/events/fetch': true,
 
-  'global/roles/assigned': true,
+  'organisers/roles/create': true,
+  'organisers/roles/list': true,
+  'organisers/roles/accept': true,
+  'organisers/roles/reject': true,
+
+  'organisers/events/instances/list': true,
+  'organisers/events/instances/create': true,
+
+  'organisers/customers/list': true,
+  
+  'organisers/events/ticketItems/create': true,
+
+
+  'organisers/tickets/create': true,
+
+  'csv': true,
+  'organisers/importedTicketSales/list': true,
+  'organisers/importedTicketSales/process': true,
+
+  'hermes/identify': true,
+  'hermes/signin/phone/init': true,
+  'hermes/signin/phone/complete': true,
+  'hermes/signin/refresh': true,
+  'hermes/tickets/list': true,
+  'hermes/tickets/fetch': true,
+  'hermes/tickets/transfer': true,
+  'hermes/tickets/claim': true,
 };

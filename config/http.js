@@ -29,16 +29,16 @@ module.exports.http = {
     *                                                                          *
     ***************************************************************************/
 
-    order: [
-      // 'cookieParser',
-      // 'session',
-      'bodyParser',
-      'compress',
-      'poweredBy',
-      'router',
-      'www',
-      'favicon',
-    ],
+    // order: [
+    //   'cookieParser',
+    //   'session',
+    //   'bodyParser',
+    //   'compress',
+    //   'poweredBy',
+    //   'router',
+    //   'www',
+    //   'favicon',
+    // ],
 
 
     /***************************************************************************
@@ -49,20 +49,11 @@ module.exports.http = {
     *                                                                          *
     ***************************************************************************/
 
-    bodyParser: function(req, res, next) {
-      var skipper = require('skipper')();
-      var rawParser = require('body-parser').raw({type: '*/*'});
-
-      // Create and return the middleware function
-      sails.log.debug(req.headers);
-      if (req.headers && req.headers['stripe-signature']) {
-        sails.log.info('request using raw parser middleware');
-        return rawParser(req, res, next);
-      }
-      // Otherwise use Skipper to parse the body
-      sails.log.info('request using skipper middleware');
-      return skipper(req, res, next);
-    },
+    // bodyParser: (function _configureBodyParser(){
+    //   var skipper = require('skipper');
+    //   var middlewareFn = skipper({ strict: true });
+    //   return middlewareFn;
+    // })(),
 
   },
 

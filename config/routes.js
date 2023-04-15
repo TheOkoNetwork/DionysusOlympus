@@ -20,37 +20,56 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
-  'GET /version': { action: 'version' },
-  'GET /pubsub/token': { action: 'pubsub/token' },
-  'POST /cart': { action: 'cart/new' },
-  'GET /cart/:key': { action: 'cart/cart' },
-  'GET /cart/:key/order': { action: 'cart/order' },
+  'POST /organisers': 'organisers/create',
+  'GET /organisers': 'organisers/list',
+  'GET /organisers/:organiser': 'organisers/fetch',
+  'GET /organisers/:organiser/accessPoints': 'organisers/accessPoints/list',
+  'POST /organisers/:organiser/accessPoints': 'organisers/accessPoints/create',
+  'GET /organisers/:organiser/accessPoints/:accessPoint': 'organisers/accessPoints/fetch',
 
-  'GET /order/:key': { action: 'order/order' },
-  'GET /order/:key/tickets': { action: 'order/tickets' },
-  'POST /cart/:key/pay': { action: 'cart/pay' },
-  'POST /stripe/webhook': { action: 'stripe/webhook' },
-  'GET /tickets': { action: 'tickets/tickets' },
-  'POST /tickets/:id/claim': { action: 'tickets/claim' },
-  'POST /tickets/:id/transfer': { action: 'tickets/transfer' },
-  'GET /tickets/:id/mobileWallet': { action: 'tickets/mobile-wallet' },
+  'GET /organisers/:organiser/salesChannels': 'organisers/salesChannels/list',
+  'POST /organisers/:organiser/salesChannels': 'organisers/salesChannels/create',
+  'GET /organisers/:organiser/salesChannels/:salesChannel': 'organisers/salesChannels/fetch',
 
-  'GET /validate/events': { action: 'validate/events' },
-  'GET /validate/events/:eventId/tickets': { action: 'validate/tickets' },
-  'GET /validate/events/:eventId/scans': { action: 'validate/scans' },
 
-  'POST /validate/device-registration': { action: 'validate/device-registration' },
-  'POST /validate/validate': { action: 'validate/validate' },
+  'GET /organisers/:organiser/events': 'organisers/events/list',
+  'POST /organisers/:organiser/events': 'organisers/events/create',
+  'GET /organisers/:organiser/events/:event': 'organisers/events/fetch',
 
-  'GET /admin/tickets': { action: 'admin/tickets/tickets' },
-  'GET /admin/tickets/:id/': { action: 'admin/tickets/ticket' },
-  'POST /admin/tickets/:id/transfer': { action: 'admin/tickets/transfer' },
-  'GET /admin/uid-to-email': { action: 'admin/uid-to-email' },
-  'POST /admin/events/:eventId/set-total-qty': { action: 'admin/events/set-total-qty' },
-  'POST /admin/tickets/bulk-issue': { action: 'admin/tickets/bulk-issue' },
-  'POST /admin/roles': { action: 'admin/roles/set' },
 
-  'GET /global/roles/assigned': { action: 'global/roles/assigned' },
+  'GET /organisers/:organiser/roles': 'organisers/roles/list',
+  'POST /organisers/:organiser/roles': 'organisers/roles/create',
+  'POST /organisers/:organiser/roles/accept': 'organisers/roles/accept',
+  'POST /organisers/:organiser/roles/reject': 'organisers/roles/reject',
+
+  'GET /organisers/:organiser/events/:event/instances': 'organisers/events/instances/list',
+  'POST /organisers/:organiser/events/:event/instances': 'organisers/events/instances/create',
+
+
+  'GET /organisers/:organiser/events/:event/ticketItems': 'organisers/events/ticketItems/list',
+  'POST /organisers/:organiser/events/:event/ticketItems': 'organisers/events/ticketItems/create',
+
+  'POST /organisers/:organiser/customers': 'organisers/customers/create',
+  'GET /organisers/:organiser/customers': 'organisers/customers/list',
+
+  'POST /organisers/:organiser/tickets': 'organisers/tickets/create',
+
+  'POST /csv': 'csv',
+  'GET /organisers/:organiser/importedTicketSales': 'organisers/importedTicketSales/list',
+  'POST /organisers/:organiser/importedTicketSales': 'organisers/importedTicketSales/process',
+
+
+
+  'POST /hermes/identify': 'hermes/identify',
+  'POST /hermes/signin/phone/init': 'hermes/signin/phone/init',
+  'POST /hermes/signin/phone/complete': 'hermes/signin/phone/complete',
+  'GET /hermes/signin/refresh': 'hermes/signin/refresh',
+  'GET /hermes/tickets': 'hermes/tickets/list',
+  'GET /hermes/tickets/:ticket': 'hermes/tickets/fetch',
+  'POST /hermes/tickets/:ticket/transfer': 'hermes/tickets/transfer',
+  'POST /hermes/tickets/:ticket/claim': 'hermes/tickets/claim',
+  
+
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *

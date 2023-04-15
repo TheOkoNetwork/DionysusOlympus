@@ -34,7 +34,7 @@ module.exports.datastores = {
 
   default: {
     adapter: 'sails-mongo',
-    url: process.env.MONGODB_URL
+    url: 'mongodb+srv://dionysus:FSdKjur2C9AcapBT@dionysus-dev.lnsguxt.mongodb.net/dionysus?retryWrites=true&w=majority'
   }
 
 
