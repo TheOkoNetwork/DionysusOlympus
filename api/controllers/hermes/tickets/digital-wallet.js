@@ -26,7 +26,7 @@ module.exports = {
         message: `Ticket not claimed`,
       });
     }
-    if (!ticket.flags.includes('DIGITAL_WALLET_ALLOW')) {
+    if (!ticket.flags['DIGITAL_WALLET_ALLOW']) {
       return res.send({
         status: false,
         message: `Ticket does not allow digital wallet`,

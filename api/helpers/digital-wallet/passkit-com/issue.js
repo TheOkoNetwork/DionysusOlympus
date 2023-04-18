@@ -32,6 +32,9 @@ module.exports = {
     if (!ticket.ticketHolder) {
       throw new Error('TICKET_NOT_CLAIMED');
     }
+    if (ticket.digitalWallet && ticket.digitalWallet.provider === 'passkit.com') {
+      return ticket.digitalWallet.passkitCom.passId;
+    };
     const jwt = sails.helpers.digitalWallet.passkitCom.jwt();
     const issuedPass = await fetch('https://api.pub1.passkit.io/eventTickets/ticket', {
       method: 'POST',
