@@ -68,6 +68,7 @@ module.exports.routes = {
   'GET /hermes/tickets/:ticket': 'hermes/tickets/fetch',
   'POST /hermes/tickets/:ticket/transfer': 'hermes/tickets/transfer',
   'POST /hermes/tickets/:ticket/claim': 'hermes/tickets/claim',
+  'GET /hermes/tickets/:ticket/digitalWallet': 'hermes/tickets/digital-wallet',
   
 
   /***************************************************************************

@@ -53,6 +53,7 @@ module.exports = {
     .create({to: phoneNumber, code: inputs.mfaCode});
       sails.log(verification);
       if (verification.status === 'approved') {
+        await PhoneVerificationRequests.update({phoneNumber: phoneNumber, sid: verification.sid}, {status: 'approved'});
         return await sails.helpers.hermes.jwt.with({phoneNumber: phoneNumber, salesChannel: inputs.salesChannel, organiser: inputs.organiser});
       } else {
         return false;

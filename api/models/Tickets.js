@@ -65,7 +65,13 @@ module.exports = {
       required: false,
       description: 'The name of the holder of the ticket',
       allowNull: true,
-    }
+    },
+    digitalWallet: {
+      type: 'json',
+      required: false,
+      description: 'Digital wallet details',
+      defaultsTo: {},
+    },
   },
 
 };

@@ -53,4 +53,5 @@ module.exports.policies = {
   'hermes/tickets/fetch': true,
   'hermes/tickets/transfer': true,
   'hermes/tickets/claim': true,
+  'hermes/tickets/digital-wallet': true,
 };

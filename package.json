@@ -12,6 +12,7 @@
     "@sailshq/lodash": "^3.10.3",
     "@sailshq/socket.io-redis": "^5.2.0",
     "azure-jwt-verify": "^1.0.0",
+    "crypto-js": "^4.1.1",
     "google-libphonenumber": "^3.2.32",
     "grunt": "1.0.4",
     "handlebars": "^4.7.7",
